@@ -18,7 +18,5 @@ public class MainActivity extends AppCompatActivity {
     void toCritTables(View v) {
         Intent critIntent = new Intent(MainActivity.this, CriticalHitTablesActivity.class);
         startActivity(critIntent);
-        /*TextView welcomeMessage = (TextView) findViewById(R.id.welcomeText);
-        welcomeMessage.setText("Fuck off, Android Studio");*/
     }
 }
