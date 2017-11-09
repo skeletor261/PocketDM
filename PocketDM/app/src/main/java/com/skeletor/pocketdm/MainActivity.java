@@ -15,8 +15,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.main_menu);
     }
 
-    public void toCritTables(View view) {
-        Intent critIntent = new Intent(this, CriticalHitTablesActivity.class);
+    void toCritTables(View v) {
+        Intent critIntent = new Intent(MainActivity.this, CriticalHitTablesActivity.class);
         startActivity(critIntent);
+        /*TextView welcomeMessage = (TextView) findViewById(R.id.welcomeText);
+        welcomeMessage.setText("Fuck off, Android Studio");*/
     }
 }
