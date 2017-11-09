@@ -166,5 +166,41 @@ class critTable extends tables {
 }
 
 class fumbleTable extends tables {
-    
+    Map<Integer, String> slashingTable = new HashMap<Integer, String>() {{
+        put(1, "You are distracted and trip. Roll DEX or fall.");
+        put(26, "You clumsy fool. You fall. Roll DEX or drop primary weapon.");
+        put(40, "You clumsily fall and drop your primary weapon. Roll DEX or be stunned for 1 round.");
+        put(51, "You are useless! Fall and become stunned for 1 round.");
+        put(54, "You have become dazed and lost in your actions. You fall, drop your primary weapon, and are stunned for 1 round.");
+        put(58, "You are stunned by your failure. Fall and become stunned for 1d4 rounds.");
+        put(60, "You are dazed and become stunned in your confusion. Fall, drop your primary weapon, and be stunned for 1d4 rounds.");
+        put(61, "You fall unconscious. Fall, knock head on floor, and you are knocked out for 1d4 rounds.");
+        put(62, "You are inept. Weapon disarmed and thrown d20 feet in random direction.");
+        put(63, "You are a very inept adventurer. Your Weapon or appendage breaks(d2).");
+        put(66, "You klutz. You twist your ankle, 1/2 move speed.");
+        put(68, "You're dangerous to yourself. Twist knee, 1/4 move speed.");
+        put(70, "As if you were untrained. Twist your wrist, weapon arm incapacitated, drop weapon.");
+        put(71, "Vulnerable. Opponent steps on foot, go last next round.");
+        put(72, "You're knocked silly. Your helm twists, and you are blind until the end of next round, roll again instead, if no helm.");
+        put(73, "Your poor judgement costs you. Opponent's next attack is at +4 to hit.");
+        put(75, "You smash your hand. -4 to hit until end of next round.");
+        put(77, "Just embarrassing. Armor piece knocked off, strap cut, belt cut, clothes torn, lose 2 armor class until fixed.");
+        put(80, "Your mistake leaves you in staggering pain. 1/2 move speed and -4 to hit for 3 rounds.");
+        put(81, "Your mistake leaves you numb. -2 damage for 3 rounds.");
+        put(82, "Something irritates your eye. -1 to hit until cleaned.");
+        put(83, "Your eyes are blinded by dirt, -3 to hit until cleaned.");
+        put(84, "Fool. Hit self, normal damage.");
+        put(86, "Useless fool. Hit self, normal damage and stunned for 1 round.");
+        put(87, "You moron. Hit self, double damage.");
+        put(89, "Useless moron. Hit self, double damage and stunned for 1 round.");
+        put(90, "You're a complete moron. Hit self, critical hit.");
+        put(91, "You are unaware of your surroundings, and it will cost your allies. Hit friend, normal damage.");
+        put(93, "Pay more attention. Hit friend, normal damage, and friend stunned for 1 round.");
+        put(94, "Watch what you're doing moron. Hit friend, double damage.");
+        put(96, "You are a liability to yourself and others. Hit friend, double damage, and friend stunned for 1 round.");
+        put(97, "You will be the downfall of your allies. Hit friend, critical hit.");
+        put(98, "Roll twice on fumble table, if this comes up again, re-roll.");
+        put(99, "Roll three times on fumble table, if this comes up again, re-roll.");
+        put(100, "Roll three times on fumble table, if this comes up again, add two more rolls.");
+    }};
 }
