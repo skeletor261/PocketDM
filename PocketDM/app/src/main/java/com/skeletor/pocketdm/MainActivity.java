@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.main_menu);
     }
 
-    void toCritTables() {
+    void toCritTables(View view) {
         Intent critIntent = new Intent(this, CriticalHitTablesActivity.class);
         startActivity(critIntent);
     }
