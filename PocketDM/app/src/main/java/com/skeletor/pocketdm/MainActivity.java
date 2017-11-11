@@ -19,4 +19,9 @@ public class MainActivity extends AppCompatActivity {
         Intent critIntent = new Intent(this, CriticalHitTablesActivity.class);
         startActivity(critIntent);
     }
+
+    void toFumbleTables(View view) {
+        Intent fumbleIntent = new Intent(this, FumbleTablesActivity.class);
+        startActivity(fumbleIntent);
+    }
 }

@@ -15,7 +15,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".CriticalHitTablesActivity"></activity>
+        <activity android:name=".CriticalHitTablesActivity" />
+        <activity android:name=".FumbleTablesActivity"></activity>
     </application>
 
 </manifest>

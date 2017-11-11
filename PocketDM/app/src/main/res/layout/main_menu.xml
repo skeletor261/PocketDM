@@ -24,10 +24,11 @@
         android:id="@+id/fumbleButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="130dp"
-        android:text="Fumble"
         android:layout_below="@+id/critButton"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="130dp"
+        android:onClick="toFumbleTables"
+        android:text="Fumble" />
 
     <TextView
         android:id="@+id/welcomeText"
