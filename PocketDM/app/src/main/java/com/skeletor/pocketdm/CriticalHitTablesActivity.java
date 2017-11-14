@@ -17,5 +17,24 @@ public class CriticalHitTablesActivity extends AppCompatActivity {
 
     void onButtonClick(View weaponButton) {
         int rollValue = Integer.parseInt(rollInput.getText().toString());
+
+        switch(weaponButton.getId()) {
+            case R.id.slashingButton :
+                // Import slashingTable
+                break;
+            case R.id.bludgeoningButton :
+                // Import bludgeoningTable
+                break;
+            case R.id.piercingButton :
+                // Import piercingTable
+                break;
+            case R.id.magicButton :
+                // Import magicTable
+                break;
+        }
+
+        // Search the selected table for the key <= rollInput
+
+        // Print the value to resultText
     }
 }
