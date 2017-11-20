@@ -9,18 +9,21 @@ import java.util.Set;
 
 /**
  * Created by Andrew on 11/8/2017.
- * This file is for storing the tables translated from C to Java
+ * This file is for storing the crit and fumble tables translated from C to Java
  */
 
-
+// Parent class for all table types
 public class tables {
+    // All tables take an input roll value and output a string of text as a result
     int roll;
     String outcome;
 }
 
+// Sub-class of tables for critical hits
 class critTable extends tables {
     String weapon;
 
+    // Table of critical hit results for slashing weapons
     Map<Integer, String> slashingTable = new HashMap<Integer, String>() {{
         put(1, "2x damage.");
         put(31, "2x damage, chance shield breaks d2.");
@@ -57,6 +60,7 @@ class critTable extends tables {
         put(100, "Cut in two, death.");
     }};
 
+    // Table of critical hit results for bludgeoning weapons
     Map<Integer, String> bludgeoningTable = new HashMap<Integer, String>() {{
         put(1, "2x damage.");
         put(31, "2x damage, chance shield breaks d2.");
@@ -93,6 +97,7 @@ class critTable extends tables {
         put(100, "Groin crushed, death.");
     }};
 
+    // Table of critical hit results for piercing weapons
     Map<Integer, String> piercingTable = new HashMap<Integer, String>() {{
         put(1, "2x damage.");
         put(31, "2x damage, chance shield breaks d2.");
@@ -128,6 +133,7 @@ class critTable extends tables {
         put(100, "Heart pierced, death, if an enemy is standing behind the character in a straight line within your speed, run them through. Deal standard critical damage.");
     }};
 
+    // Table of critical hit results for using magic
     Map<Integer, String> magicTable = new HashMap<Integer, String>() {{
         put(1, "2x damage.");
         put(31, "2x damage, chance shield breaks d2.");
@@ -165,7 +171,9 @@ class critTable extends tables {
     }};
 }
 
+// Sub-class of tables for fumbles
 class fumbleTable extends tables {
+    // Table of fumble results for all weapons
     Map<Integer, String> slashingTable = new HashMap<Integer, String>() {{
         put(1, "You are distracted and trip. Roll DEX or fall.");
         put(26, "You clumsy fool. You fall. Roll DEX or drop primary weapon.");
