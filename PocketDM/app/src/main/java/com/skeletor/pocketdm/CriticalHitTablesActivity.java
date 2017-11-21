@@ -5,10 +5,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
-
 import java.util.HashMap;
 import java.util.Map;
-import com.skeletor.pocketdm.tables;
 
 public class CriticalHitTablesActivity extends AppCompatActivity {
 
@@ -42,7 +40,10 @@ public class CriticalHitTablesActivity extends AppCompatActivity {
         rollValue = Integer.parseInt(rollInput.getText().toString());
 
         // Check for rollValue > 100 or < 1 and return error message if true
-        //
+        if (rollValue < 1 || rollValue > 100) {
+            resultText.setText("Please enter a valid percentile roll.");
+            return;
+        }
 
         // Determines which weapon button is pressed and imports the corresponding table
         switch(weaponButton.getId()) {
