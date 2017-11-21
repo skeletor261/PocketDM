@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -13,6 +14,9 @@ public class CriticalHitTablesActivity extends AppCompatActivity {
 
     // Sets a class variable reference to the EditText input View object
     final EditText rollInput = (EditText) findViewById(R.id.rollInput);
+
+    // Sets a class variable reference to the TextView output View object
+    final TextView resultText = (TextView) findViewById(R.id.resultText);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,7 +28,9 @@ public class CriticalHitTablesActivity extends AppCompatActivity {
     void onButtonClick(View weaponButton) {
 
         // Receive the value input for the percentile roll
-        int rollValue = Integer.parseInt(rollInput.getText().toString());
+         int rollValue = Integer.parseInt(rollInput.getText().toString());
+
+        // Check for rollValue > 100 or < 1 and return error message if true
 
         // Creates an empty HashMap for importing crit tables
         Map<Integer, String> weaponTable = new HashMap<Integer, String>() {};
@@ -46,7 +52,11 @@ public class CriticalHitTablesActivity extends AppCompatActivity {
         }
 
         // Search the selected table for the key <= rollInput
+        while (!weaponTable.containsKey(rollValue)){
+            rollValue --;
+        }
 
-        // Print the value to resultText
+        // Print the result from the table to the screen
+        resultText.setText(weaponTable.get(rollValue));
     }
 }
