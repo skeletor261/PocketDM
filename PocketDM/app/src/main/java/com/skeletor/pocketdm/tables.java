@@ -12,8 +12,12 @@ import java.util.Set;
  * This file is for storing the crit and fumble tables translated from C to Java
  */
 
+
+class tables {
+    //This parent class remains empty for now
+}
 // Tables for critical hits
-class critTable {
+class critTable extends tables{
 
     // Table of critical hit results for slashing weapons
     static Map<Integer, String> slashingTable = new HashMap<Integer, String>() {{
@@ -182,7 +186,7 @@ class critTable {
 }
 
 // Tables for fumbles
-class fumbleTable {
+class fumbleTable extends tables{
 
     // Table of fumble results for all weapons
     Map<Integer, String> slashingTable = new HashMap<Integer, String>() {{
