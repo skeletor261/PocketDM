@@ -5,6 +5,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 
+import java.util.HashMap;
+import java.util.Map;
+import com.skeletor.pocketdm.tables;
+
 public class CriticalHitTablesActivity extends AppCompatActivity {
 
     // Sets a class variable reference to the EditText input View object
@@ -18,22 +22,24 @@ public class CriticalHitTablesActivity extends AppCompatActivity {
 
     // Determines which weapon button is pressed
     void onButtonClick(View weaponButton) {
-        
+
         // Receive the value input for the percentile roll
         int rollValue = Integer.parseInt(rollInput.getText().toString());
 
+        Map<Integer, String> weaponTable = new HashMap<Integer, String>() {};
+
         switch(weaponButton.getId()) {
             case R.id.slashingButton :
-                // Import slashingTable
+                weaponTable = critTable.getTable("slashingTable");
                 break;
             case R.id.bludgeoningButton :
-                // Import bludgeoningTable
+                weaponTable = critTable.getTable("bludgeoningTable");
                 break;
             case R.id.piercingButton :
-                // Import piercingTable
+                weaponTable = critTable.getTable("piercingTable");
                 break;
             case R.id.magicButton :
-                // Import magicTable
+                weaponTable = critTable.getTable("magicTable");
                 break;
         }
 

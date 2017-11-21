@@ -24,7 +24,7 @@ class critTable extends tables {
     String weapon;
 
     // Table of critical hit results for slashing weapons
-    Map<Integer, String> slashingTable = new HashMap<Integer, String>() {{
+    static Map<Integer, String> slashingTable = new HashMap<Integer, String>() {{
         put(1, "2x damage.");
         put(31, "2x damage, chance shield breaks d2.");
         put(41, "3x damage.");
@@ -61,7 +61,7 @@ class critTable extends tables {
     }};
 
     // Table of critical hit results for bludgeoning weapons
-    Map<Integer, String> bludgeoningTable = new HashMap<Integer, String>() {{
+    static Map<Integer, String> bludgeoningTable = new HashMap<Integer, String>() {{
         put(1, "2x damage.");
         put(31, "2x damage, chance shield breaks d2.");
         put(41, "3x damage.");
@@ -98,7 +98,7 @@ class critTable extends tables {
     }};
 
     // Table of critical hit results for piercing weapons
-    Map<Integer, String> piercingTable = new HashMap<Integer, String>() {{
+    static Map<Integer, String> piercingTable = new HashMap<Integer, String>() {{
         put(1, "2x damage.");
         put(31, "2x damage, chance shield breaks d2.");
         put(41, "3x damage.");
@@ -134,7 +134,7 @@ class critTable extends tables {
     }};
 
     // Table of critical hit results for using magic
-    Map<Integer, String> magicTable = new HashMap<Integer, String>() {{
+    static Map<Integer, String> magicTable = new HashMap<Integer, String>() {{
         put(1, "2x damage.");
         put(31, "2x damage, chance shield breaks d2.");
         put(41, "3x damage.");
@@ -169,6 +169,22 @@ class critTable extends tables {
         put(99, "Head blown off, death.");
         put(100, "Obliterated, death.");
     }};
+
+
+    // Method for returning correct weapon table
+    public static Map<Integer, String> getTable(String tableName) {
+
+        if (tableName == "slashingTable")
+            return slashingTable;
+        else if (tableName == "bludgeoningTable")
+            return bludgeoningTable;
+        else if (tableName == "piercingTable")
+            return piercingTable;
+        else if (tableName == "magicTable")
+            return magicTable;
+
+        return null;
+    }
 }
 
 // Sub-class of tables for fumbles
@@ -212,3 +228,5 @@ class fumbleTable extends tables {
         put(100, "Roll three times on fumble table, if this comes up again, add two more rolls.");
     }};
 }
+
+
