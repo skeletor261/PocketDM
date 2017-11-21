@@ -26,8 +26,10 @@ public class CriticalHitTablesActivity extends AppCompatActivity {
         // Receive the value input for the percentile roll
         int rollValue = Integer.parseInt(rollInput.getText().toString());
 
+        // Creates an empty HashMap for importing crit tables
         Map<Integer, String> weaponTable = new HashMap<Integer, String>() {};
 
+        // Determines which weapon button is pressed and imports the corresponding table
         switch(weaponButton.getId()) {
             case R.id.slashingButton :
                 weaponTable = critTable.getTable("slashingTable");

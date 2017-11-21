@@ -21,7 +21,6 @@ public class tables {
 
 // Sub-class of tables for critical hits
 class critTable extends tables {
-    String weapon;
 
     // Table of critical hit results for slashing weapons
     static Map<Integer, String> slashingTable = new HashMap<Integer, String>() {{
@@ -183,12 +182,15 @@ class critTable extends tables {
         else if (tableName == "magicTable")
             return magicTable;
 
+        // Standard response
+        // Should not be reached
         return null;
     }
 }
 
 // Sub-class of tables for fumbles
 class fumbleTable extends tables {
+
     // Table of fumble results for all weapons
     Map<Integer, String> slashingTable = new HashMap<Integer, String>() {{
         put(1, "You are distracted and trip. Roll DEX or fall.");
