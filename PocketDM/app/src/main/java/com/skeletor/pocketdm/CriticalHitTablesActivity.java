@@ -36,9 +36,14 @@ public class CriticalHitTablesActivity extends AppCompatActivity {
     // Determines which weapon button is pressed
     void onButtonClick(View weaponButton) {
 
-        // Receive the value input for the percentile roll
-        rollValue = Integer.parseInt(rollInput.getText().toString());
-
+        try {
+            // Receive the value input for the percentile roll
+            rollValue = Integer.parseInt(rollInput.getText().toString());
+        } catch(NumberFormatException e){
+            // If the input string was not an integer this exception will be caught
+            resultText.setText("Please enter a valid percentile roll.");
+        }
+        
         // Check for rollValue > 100 or < 1 and return error message if true
         if (rollValue < 1 || rollValue > 100) {
             resultText.setText("Please enter a valid percentile roll.");
