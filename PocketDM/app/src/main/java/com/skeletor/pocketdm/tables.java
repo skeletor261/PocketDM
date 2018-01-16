@@ -9,19 +9,18 @@ import java.util.Set;
 
 /**
  * Created by Andrew on 11/8/2017.
- * This file is for storing the tables translated from C to Java
+ * This file is for storing the crit and fumble tables translated from C to Java
  */
 
 
-public class tables {
-    int roll;
-    String outcome;
+class tables {
+    //This parent class remains empty for now
 }
+// Tables for critical hits
+class critTable extends tables{
 
-class critTable extends tables {
-    String weapon;
-
-    Map<Integer, String> slashingTable = new HashMap<Integer, String>() {{
+    // Table of critical hit results for slashing weapons
+    static Map<Integer, String> slashingTable = new HashMap<Integer, String>() {{
         put(1, "2x damage.");
         put(31, "2x damage, chance shield breaks d2.");
         put(41, "3x damage.");
@@ -57,7 +56,8 @@ class critTable extends tables {
         put(100, "Cut in two, death.");
     }};
 
-    Map<Integer, String> bludgeoningTable = new HashMap<Integer, String>() {{
+    // Table of critical hit results for bludgeoning weapons
+    static Map<Integer, String> bludgeoningTable = new HashMap<Integer, String>() {{
         put(1, "2x damage.");
         put(31, "2x damage, chance shield breaks d2.");
         put(41, "3x damage.");
@@ -93,7 +93,8 @@ class critTable extends tables {
         put(100, "Groin crushed, death.");
     }};
 
-    Map<Integer, String> piercingTable = new HashMap<Integer, String>() {{
+    // Table of critical hit results for piercing weapons
+    static Map<Integer, String> piercingTable = new HashMap<Integer, String>() {{
         put(1, "2x damage.");
         put(31, "2x damage, chance shield breaks d2.");
         put(41, "3x damage.");
@@ -128,7 +129,8 @@ class critTable extends tables {
         put(100, "Heart pierced, death, if an enemy is standing behind the character in a straight line within your speed, run them through. Deal standard critical damage.");
     }};
 
-    Map<Integer, String> magicTable = new HashMap<Integer, String>() {{
+    // Table of critical hit results for using magic
+    static Map<Integer, String> magicTable = new HashMap<Integer, String>() {{
         put(1, "2x damage.");
         put(31, "2x damage, chance shield breaks d2.");
         put(41, "3x damage.");
@@ -163,9 +165,30 @@ class critTable extends tables {
         put(99, "Head blown off, death.");
         put(100, "Obliterated, death.");
     }};
+
+
+    // Method for returning correct weapon table
+    public static Map<Integer, String> getTable(String tableName) {
+
+        if (tableName == "slashingTable")
+            return slashingTable;
+        else if (tableName == "bludgeoningTable")
+            return bludgeoningTable;
+        else if (tableName == "piercingTable")
+            return piercingTable;
+        else if (tableName == "magicTable")
+            return magicTable;
+
+        // Standard response
+        // Should not be reached
+        return null;
+    }
 }
 
-class fumbleTable extends tables {
+// Tables for fumbles
+class fumbleTable extends tables{
+
+    // Table of fumble results for all weapons
     Map<Integer, String> slashingTable = new HashMap<Integer, String>() {{
         put(1, "You are distracted and trip. Roll DEX or fall.");
         put(26, "You clumsy fool. You fall. Roll DEX or drop primary weapon.");
@@ -204,3 +227,5 @@ class fumbleTable extends tables {
         put(100, "Roll three times on fumble table, if this comes up again, add two more rolls.");
     }};
 }
+
+
