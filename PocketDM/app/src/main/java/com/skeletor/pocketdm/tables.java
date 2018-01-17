@@ -189,7 +189,7 @@ class critTable extends tables{
 class fumbleTable extends tables{
 
     // Table of fumble results for all weapons
-    Map<Integer, String> slashingTable = new HashMap<Integer, String>() {{
+    static Map<Integer, String> resultTable = new HashMap<Integer, String>() {{
         put(1, "You are distracted and trip. Roll DEX or fall.");
         put(26, "You clumsy fool. You fall. Roll DEX or drop primary weapon.");
         put(40, "You clumsily fall and drop your primary weapon. Roll DEX or be stunned for 1 round.");
