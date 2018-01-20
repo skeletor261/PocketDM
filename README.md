@@ -8,5 +8,5 @@ When a player or NPC in D&D rolls a 20 or 1 the effects of their incredible succ
 Version 0.1.0 - Initial Development Release, is now available in the Master Branch files for download
 
 Features:
-Critical Hit Tables - Individual tables for each weapon type
-Fumble Tables
+* Critical Hit Tables - Individual tables for each weapon type
+* Fumble Tables
