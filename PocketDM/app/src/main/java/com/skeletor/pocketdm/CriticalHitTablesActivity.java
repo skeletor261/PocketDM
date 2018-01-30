@@ -34,7 +34,7 @@ public class CriticalHitTablesActivity extends AppCompatActivity {
     }
 
     // Determines which weapon button is pressed
-    void onButtonClick(View weaponButton) {
+    public void onButtonClick(View weaponButton) {
 
         try {
             // Receive the value input for the percentile roll
