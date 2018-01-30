@@ -34,7 +34,7 @@ public class FumbleTablesActivity extends AppCompatActivity {
     }
 
     // Finds the value of the percentile roll in the fumble table
-    void onButtonClick(View goButton) {
+    public void onButtonClick(View goButton) {
 
         try {
             // Receive the value input for the percentile roll
