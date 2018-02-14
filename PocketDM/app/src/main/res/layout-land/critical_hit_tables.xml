@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.skeletor.pocketdm.CriticalHitTablesAcitivity">
+
+    <TextView
+        android:id="@+id/infoText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="124dp"
+        android:layout_marginTop="16dp"
+        android:text="Enter Your Percentile Roll"
+        app:layout_constraintBottom_toTopOf="@+id/slashingButton"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintTop_creator="1" />
+
+    <EditText
+        android:id="@+id/rollInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="72dp"
+        android:layout_marginStart="96dp"
+        android:ems="10"
+        android:hint="Percentile Roll"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/bludgeoningButton"
+        app:layout_constraintStart_toEndOf="@+id/infoText" />
+
+    <TextView
+        android:id="@+id/infoText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginStart="260dp"
+        android:text="Select Your Weapon Type"
+        app:layout_constraintBottom_toTopOf="@+id/slashingButton"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/slashingButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="36dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="44dp"
+        android:onClick="onButtonClick"
+        android:text="Slashing"
+        app:layout_constraintBottom_toTopOf="@+id/piercingButton"
+        app:layout_constraintEnd_toStartOf="@+id/bludgeoningButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/bludgeoningButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="36dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginStart="16dp"
+        android:onClick="onButtonClick"
+        android:text="Bludgeoning"
+        app:layout_constraintBottom_toTopOf="@+id/magicButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/slashingButton" />
+
+    <Button
+        android:id="@+id/piercingButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="44dp"
+        android:onClick="onButtonClick"
+        android:text="Piercing"
+        app:layout_constraintBaseline_toBaselineOf="@+id/magicButton"
+        app:layout_constraintEnd_toStartOf="@+id/magicButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/magicButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="88dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginStart="16dp"
+        android:onClick="onButtonClick"
+        android:text="Magic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/piercingButton" />
+
+    <TextView
+        android:id="@+id/resultText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.499"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/piercingButton" />
+</android.support.constraint.ConstraintLayout>
