@@ -17,7 +17,7 @@ public class FumbleTablesActivity extends AppCompatActivity {
     private TextView resultText;
     //
     // Values
-    private int rollValue;
+    private Integer rollValue;
     //
     // Creates an empty HashMap for importing fumble table
     private Map<Integer, String> valueTable = new HashMap<Integer, String>() {};
@@ -39,9 +39,10 @@ public class FumbleTablesActivity extends AppCompatActivity {
         try {
             // Receive the value input for the percentile roll
             rollValue = Integer.parseInt(rollInput.getText().toString());
-        } catch(NumberFormatException e){
+        } catch(NumberFormatException | NullPointerException e){
             // If the input string was not an integer this exception will be caught
             resultText.setText("Please enter a valid percentile roll.");
+            return;
         }
 
         // Check for rollValue > 100 or < 1 and return error message if true
