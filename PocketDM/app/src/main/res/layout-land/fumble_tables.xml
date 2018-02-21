@@ -28,7 +28,7 @@
         android:layout_marginTop="16dp"
         android:ems="10"
         android:hint="Percentile Roll"
-        android:inputType="textPersonName"
+        android:inputType="number"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/goButton"
         app:layout_constraintTop_toTopOf="parent" />
