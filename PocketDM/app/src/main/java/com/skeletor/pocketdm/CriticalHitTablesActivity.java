@@ -27,6 +27,7 @@ public class CriticalHitTablesActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.critical_hit_tables);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         // Set View objects to class instances
         rollInput = (EditText) findViewById(R.id.rollInput);

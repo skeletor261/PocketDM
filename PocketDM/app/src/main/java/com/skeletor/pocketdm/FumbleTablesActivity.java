@@ -27,6 +27,7 @@ public class FumbleTablesActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fumble_tables);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         // Set View objects to class instances
         rollInput = (EditText) findViewById(R.id.rollInput);
