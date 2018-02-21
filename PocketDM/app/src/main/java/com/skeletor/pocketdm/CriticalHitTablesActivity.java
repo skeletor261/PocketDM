@@ -1,8 +1,10 @@
 package com.skeletor.pocketdm;
 
+import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.TextView;
 import java.util.HashMap;
@@ -37,6 +39,10 @@ public class CriticalHitTablesActivity extends AppCompatActivity {
     // Determines which weapon button is pressed
     public void onButtonClick(View weaponButton) {
 
+        // Closes the soft keyboard opened by rollInput
+        InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+        imm.hideSoftInputFromWindow(rollInput.getWindowToken(), 0);
+        
         try {
             // Receive the value input for the percentile roll
             rollValue = Integer.parseInt(rollInput.getText().toString());
