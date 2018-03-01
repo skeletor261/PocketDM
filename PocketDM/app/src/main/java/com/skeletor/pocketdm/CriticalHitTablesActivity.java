@@ -42,7 +42,7 @@ public class CriticalHitTablesActivity extends AppCompatActivity {
         // Closes the soft keyboard opened by rollInput
         InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
         imm.hideSoftInputFromWindow(rollInput.getWindowToken(), 0);
-        
+
         try {
             // Receive the value input for the percentile roll
             rollValue = Integer.parseInt(rollInput.getText().toString());
