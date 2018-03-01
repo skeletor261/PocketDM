@@ -5,11 +5,24 @@ When a player or NPC in D&D rolls a 20 or 1 the effects of their incredible succ
 
 ------------------------------------------------------------------------------------------------------------------------------------------
 
+Version 0.1.2 - Patch
+
+Bug Fixes
+- Auto-close keyboard when pressing a button
+
+User Interface Updates
+- Selecting to enter percentile roll value now opens a number keypad instead of a full keyboard
+- Up navigation is now integrated into the app bar
+
+------------------------------------------------------------------------------------------------------------------------------------------
+
 Version 0.1.1 - Patch
 Bug Fixes
 * Adjusted screens for landscape layout
 * Fixed issue causing results not to prompt an error when given improper roll input values
 * Fixed result text alignment issue on long results
+
+------------------------------------------------------------------------------------------------------------------------------------------
 
 Version 0.1.0 - Initial Development Release, is now available in the Master Branch files for download
 
