@@ -1,3 +1,14 @@
 <resources>
-    <string name="app_name">PocketDM</string>
+    <string name="app_name">
+        PocketDM
+    </string>
+    <string name="help_text">
+        Welcome to Pocket DM.\n
+        \n
+        There isn\'t much to do here just yet, but for now you can take full advantage of the
+        feature that was the primary inspiration behind this app: Critical Hit and Fumble Tables.
+        To use these when your characters roll a critical hit or fumble an attack just select
+        the proper tables from the main menu, enter your percentile roll, then select the weapon
+        being used or press "Go". The result of your roll will appear below.
+    </string>
 </resources>
