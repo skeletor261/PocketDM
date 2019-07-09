@@ -8,6 +8,8 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
+        <!-- Main Activity -->
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -15,8 +17,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".CriticalHitTablesActivity" />
-        <activity android:name=".FumbleTablesActivity"></activity>
+
+        <!-- Critical Event Table Activities -->
+        <activity
+            android:name=".CriticalHitTablesActivity"
+            android:parentActivityName=".MainActivity"></activity>
+        <activity
+            android:name=".FumbleTablesActivity"
+            android:parentActivityName=".MainActivity"></activity>
+        <activity android:name=".HelpActivity"></activity>
     </application>
 
 </manifest>
